@@ -13,6 +13,11 @@ namespace MillionenshowModel
 
         public char CorrectAnwser { get; set; }
 
+        public Question(string text, string ansA, string ansB, string ansC, string ansD, char correct) 
+        {
+
+        }
+
 
     }
 }
