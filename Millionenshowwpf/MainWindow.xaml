@@ -1,0 +1,54 @@
+﻿<Window x:Class="Millionenshowwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Millionenshowwpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style  TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas x:Name="canLive" Grid.ColumnSpan="2"/>
+
+        <TextBlock x:Name="txtQuestion" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="btnA" Grid.Row="2" Grid.Column="0" Content="A"/>
+        <Button x:Name="btnB" Grid.Row="2" Grid.Column="1" Content="B"/>
+        <Button x:Name="btnC" Grid.Row="3" Grid.Column="0" Content="C"/>
+        <Button x:Name="btnD" Grid.Row="3" Grid.Column="1" Content="D"/>
+        
+        
+        
+
+
+
+
+    </Grid>
+</Window>
